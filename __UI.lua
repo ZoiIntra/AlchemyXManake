@@ -9,7 +9,7 @@ local RenderStepped = RunService.RenderStepped;
 local LocalPlayer = Players.LocalPlayer;
 local Mouse = LocalPlayer:GetMouse();
 
-if CoreGui:FindFirstChild("Kui_AiSus") then CoreGui:FindFirstChild("Kui_AiSus"):Destroy() end
+if CoreGui:FindFirstChild("__xyz") then CoreGui:FindFirstChild("__xyz"):Destroy() end
 
 local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
 
@@ -18,7 +18,7 @@ ProtectGui(ScreenGui);
 
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global;
 ScreenGui.Parent = CoreGui;
-ScreenGui.Name = "Kui_AiSus"
+ScreenGui.Name = "__xyz"
 
 local Toggles = {};
 local Options = {};
@@ -55,8 +55,8 @@ local Library = {
 local RainbowStep = 0
 local Hue = 0
 
-table.insert(Library.Signals, RenderStepped:Connect(function(Kui_AiSus)
-    RainbowStep = RainbowStep + Kui_AiSus
+table.insert(Library.Signals, RenderStepped:Connect(function(__xyz)
+    RainbowStep = RainbowStep + __xyz
 
     if RainbowStep >= (1 / 60) then
         RainbowStep = 0
